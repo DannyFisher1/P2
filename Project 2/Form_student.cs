@@ -22,5 +22,10 @@ namespace Project_2
         {
 
         }
+
+        private void dataGridView_ages_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

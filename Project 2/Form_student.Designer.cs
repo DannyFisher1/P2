@@ -86,6 +86,7 @@
             this.dataGridView_ages.Name = "dataGridView_ages";
             this.dataGridView_ages.Size = new System.Drawing.Size(462, 150);
             this.dataGridView_ages.TabIndex = 4;
+            this.dataGridView_ages.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ages_CellContentClick);
             // 
             // label3
             // 
