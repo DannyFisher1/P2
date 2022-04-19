@@ -67,6 +67,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="middle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="middle.Designer.cs">
+      <DependentUpon>middle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_student.resx">
       <DependentUpon>Form_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="middle.resx">
+      <DependentUpon>middle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

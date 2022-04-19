@@ -32,7 +32,7 @@ namespace Project_2
             this.label_username = new System.Windows.Forms.Label();
             this.label_password = new System.Windows.Forms.Label();
             this.u = new System.Windows.Forms.TextBox();
-            this.textBox_password = new System.Windows.Forms.TextBox();
+            this.p = new System.Windows.Forms.TextBox();
             this.button_login = new System.Windows.Forms.Button();
             this.Create_link = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,14 +70,14 @@ namespace Project_2
             this.u.TabIndex = 2;
             this.u.TextChanged += new System.EventHandler(this.textBox_username_TextChanged);
             // 
-            // textBox_password
+            // p
             // 
-            this.textBox_password.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox_password.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_password.Location = new System.Drawing.Point(218, 187);
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(100, 22);
-            this.textBox_password.TabIndex = 3;
+            this.p.BackColor = System.Drawing.Color.Gainsboro;
+            this.p.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.p.Location = new System.Drawing.Point(218, 187);
+            this.p.Name = "p";
+            this.p.Size = new System.Drawing.Size(100, 22);
+            this.p.TabIndex = 3;
             // 
             // button_login
             // 
@@ -125,7 +125,7 @@ namespace Project_2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Create_link);
             this.Controls.Add(this.button_login);
-            this.Controls.Add(this.textBox_password);
+            this.Controls.Add(this.p);
             this.Controls.Add(this.u);
             this.Controls.Add(this.label_password);
             this.Controls.Add(this.label_username);
@@ -141,7 +141,7 @@ namespace Project_2
         private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Label label_password;
         private System.Windows.Forms.TextBox u;
-        private System.Windows.Forms.TextBox textBox_password;
+        private System.Windows.Forms.TextBox p;
         private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.LinkLabel Create_link;
         private System.Windows.Forms.Label label1;
