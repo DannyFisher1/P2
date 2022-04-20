@@ -35,5 +35,20 @@ namespace Project_2
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form_update f = new form_update();
+            f.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form_update f = new form_update();
+            f.Show();
+        }
     }
 }

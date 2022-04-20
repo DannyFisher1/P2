@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button_search = new System.Windows.Forms.Button();
             this.textBox_name = new System.Windows.Forms.TextBox();
@@ -40,17 +39,9 @@
             this.button_max = new System.Windows.Forms.Button();
             this.button_min = new System.Windows.Forms.Button();
             this.button_avg = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ages)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Search Student Age";
             // 
             // label2
             // 
@@ -73,18 +64,18 @@
             // 
             // textBox_name
             // 
-            this.textBox_name.Location = new System.Drawing.Point(216, 76);
+            this.textBox_name.Location = new System.Drawing.Point(159, 73);
             this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(293, 20);
+            this.textBox_name.Size = new System.Drawing.Size(101, 20);
             this.textBox_name.TabIndex = 3;
             // 
             // dataGridView_ages
             // 
             this.dataGridView_ages.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_ages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ages.Location = new System.Drawing.Point(151, 120);
+            this.dataGridView_ages.Location = new System.Drawing.Point(70, 109);
             this.dataGridView_ages.Name = "dataGridView_ages";
-            this.dataGridView_ages.Size = new System.Drawing.Size(462, 150);
+            this.dataGridView_ages.Size = new System.Drawing.Size(651, 162);
             this.dataGridView_ages.TabIndex = 4;
             this.dataGridView_ages.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ages_CellContentClick);
             // 
@@ -93,9 +84,10 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(78, 299);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Course Indormation";
+            this.label3.Text = "Course Information";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -105,6 +97,7 @@
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Course Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -164,7 +157,6 @@
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.button_search);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form_student";
             this.Text = "Form_student";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ages)).EndInit();
@@ -174,8 +166,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.TextBox textBox_name;
@@ -187,5 +177,6 @@
         private System.Windows.Forms.Button button_max;
         private System.Windows.Forms.Button button_min;
         private System.Windows.Forms.Button button_avg;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

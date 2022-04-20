@@ -43,8 +43,9 @@ namespace Project_2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(268, 36);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Update Class Information";
+            this.button1.Text = "Update Student Information";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -54,8 +55,9 @@ namespace Project_2
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(268, 37);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Update Student Information";
+            this.button2.Text = "View Student Information";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // r
             // 
