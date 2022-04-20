@@ -46,20 +46,19 @@ namespace Project_2
                 //open the connection to DB
                 con.Open();
 
-                //select records from a database and populate a DataSet with the selected rows.
+               
                 SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
 
-                //add rows in data adapter
+            
                 adapt.Fill(ds);
 
-                // close the connection after query
                 con.Close();
 
-                //get the collection of tables in the DataSet.
+        
                 int count = ds.Tables[0].Rows.Count;
 
-                //if count is equal to 1, that means the SQL query get the record., then show frmMain form
+               
                 if (count != 1)
                 {
                     MessageBox.Show("Login Failed: Could Not Find Your Account!");
@@ -73,13 +72,13 @@ namespace Project_2
                 form_middle m = new form_middle();
                 m.Show(); 
             }
-            // catch trow out error message if there is an error
+            
             catch (Exception ex)
             {
-                //show the error message
+              
                 MessageBox.Show(ex.Message);
             }
-            //====================================================================
+          
         }
 
 
@@ -87,7 +86,9 @@ namespace Project_2
 
     private void label1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            form_update f = new form_update();
+            f.Show();
         }
 
         private void label_username_Click(object sender, EventArgs e)
@@ -105,6 +106,11 @@ namespace Project_2
             this.Hide();
             Register R = new Register();
             R.Show();
+        }
+
+        private void p_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

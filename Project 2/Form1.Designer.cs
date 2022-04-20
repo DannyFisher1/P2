@@ -78,6 +78,7 @@ namespace Project_2
             this.p.Name = "p";
             this.p.Size = new System.Drawing.Size(100, 22);
             this.p.TabIndex = 3;
+            this.p.TextChanged += new System.EventHandler(this.p_TextChanged);
             // 
             // button_login
             // 
