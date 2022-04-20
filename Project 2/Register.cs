@@ -13,6 +13,7 @@ namespace Project_2
     public partial class Register : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\danielfisher\Source\Repos\DannyFisher1\P2\Project 2\Student.mdf;Integrated Security = True");
+
         public Register()
         {
             InitializeComponent();

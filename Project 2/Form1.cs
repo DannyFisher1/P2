@@ -28,28 +28,64 @@ namespace Project_2
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            if (u.Text == "" || p.Text == "")
+            if(u.Text == "" || p.Text == "")
             {
-                MessageBox.Show("Please put in your information");
-                // the sql command you want to execute in DBMS
-                SqlCommand cmd = new SqlCommand("SELECT EXISTS (SELECT * FROM Pword WHERE i_id = @u AND pass = @p)", con);
+                MessageBox.Show("Please show your information");
+            }
+            
+            try
+
+            {
+
+                SqlCommand cmd = new SqlCommand("Select * from Pword where i_id = @username and pass = @password", con);
 
                 //Assign values to variables. Give TextBox: username -> @username; TextBox: password-> @password
-                cmd.Parameters.AddWithValue("@u", u.Text);
-                cmd.Parameters.AddWithValue("@p", p.Text);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("good");
+                cmd.Parameters.AddWithValue("@username", u.Text);
+                cmd.Parameters.AddWithValue("@password", p.Text);
+
                 //open the connection to DB
+                con.Open();
 
+                //select records from a database and populate a DataSet with the selected rows.
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
 
+                //add rows in data adapter
+                adapt.Fill(ds);
 
+                // close the connection after query
+                con.Close();
+
+                //get the collection of tables in the DataSet.
+                int count = ds.Tables[0].Rows.Count;
+
+                //if count is equal to 1, that means the SQL query get the record., then show frmMain form
+                if (count != 1)
+                {
+                    MessageBox.Show("Login Failed: Could Not Find Your Account!");
+                }
+                else
+                {
+                    MessageBox.Show("Login Successful!");
+       
+                }
+                this.Hide();
+                form_middle m = new form_middle();
+                m.Show(); 
             }
-
+            // catch trow out error message if there is an error
+            catch (Exception ex)
+            {
+                //show the error message
+                MessageBox.Show(ex.Message);
+            }
+            //====================================================================
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+    
+
+    private void label1_Click(object sender, EventArgs e)
         {
 
         }

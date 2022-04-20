@@ -44,6 +44,7 @@ namespace Project_2
             // 
             // p
             // 
+            this.p.BackColor = System.Drawing.Color.Gainsboro;
             this.p.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p.Location = new System.Drawing.Point(151, 90);
             this.p.Name = "p";
@@ -53,6 +54,7 @@ namespace Project_2
             // 
             // f
             // 
+            this.f.BackColor = System.Drawing.Color.Gainsboro;
             this.f.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.f.Location = new System.Drawing.Point(151, 50);
             this.f.Name = "f";
@@ -63,26 +65,27 @@ namespace Project_2
             // pass
             // 
             this.pass.AutoSize = true;
-            this.pass.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass.Location = new System.Drawing.Point(89, 90);
+            this.pass.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.pass.Location = new System.Drawing.Point(76, 90);
             this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(58, 16);
+            this.pass.Size = new System.Drawing.Size(64, 17);
             this.pass.TabIndex = 5;
             this.pass.Text = "Password";
             // 
             // fname
             // 
             this.fname.AutoSize = true;
-            this.fname.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fname.Location = new System.Drawing.Point(87, 50);
+            this.fname.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.fname.Location = new System.Drawing.Point(74, 50);
             this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(64, 16);
+            this.fname.Size = new System.Drawing.Size(71, 17);
             this.fname.TabIndex = 4;
             this.fname.Text = "First Name";
             this.fname.Click += new System.EventHandler(this.label_username_Click);
             // 
             // d
             // 
+            this.d.BackColor = System.Drawing.Color.Gainsboro;
             this.d.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.d.Location = new System.Drawing.Point(151, 173);
             this.d.Name = "d";
@@ -91,6 +94,7 @@ namespace Project_2
             // 
             // iid
             // 
+            this.iid.BackColor = System.Drawing.Color.Gainsboro;
             this.iid.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iid.Location = new System.Drawing.Point(151, 133);
             this.iid.Name = "iid";
@@ -100,10 +104,10 @@ namespace Project_2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 176);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.label1.Location = new System.Drawing.Point(66, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "Deparment";
             // 
@@ -111,7 +115,7 @@ namespace Project_2
             // 
             this.id.AutoSize = true;
             this.id.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.Location = new System.Drawing.Point(107, 133);
+            this.id.Location = new System.Drawing.Point(113, 133);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(26, 16);
             this.id.TabIndex = 8;
@@ -120,7 +124,7 @@ namespace Project_2
             // 
             // button
             // 
-            this.button.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button.Location = new System.Drawing.Point(151, 241);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(86, 29);
@@ -131,6 +135,7 @@ namespace Project_2
             // 
             // button_return
             // 
+            this.button_return.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_return.Location = new System.Drawing.Point(295, 23);
             this.button_return.Name = "button_return";
             this.button_return.Size = new System.Drawing.Size(75, 23);
@@ -143,6 +148,7 @@ namespace Project_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(399, 321);
             this.Controls.Add(this.button_return);
             this.Controls.Add(this.button);
