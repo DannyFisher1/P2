@@ -43,7 +43,7 @@ namespace Project_2
 
         private void ClearData()
         {
-            sid.Text ="";
+            id.Text ="";
             sname.Text = "";
             age.Text = "";
 
@@ -79,7 +79,7 @@ namespace Project_2
 
         private void button_max_Click(object sender, EventArgs e)
         {
-            if (sid.Text == "" || sname.Text == "" || age.Text == "")
+            if (id.Text == "" || sname.Text == "" || age.Text == "")
             {
                 MessageBox.Show("Please Provide Your Information!");
             }
@@ -88,7 +88,7 @@ namespace Project_2
                 con.Open();
                 // search the student based on the student name
                 cmd = new SqlCommand("INSERT INTO Students (Students.s_id, Students.s_name,Sstudents.s_age) VALUES (@s_id,@s_name,@s_age)", con);
-                cmd.Parameters.AddWithValue("@s_id",sid.Text);
+                cmd.Parameters.AddWithValue("@s_id",id.Text);
                 cmd.Parameters.AddWithValue("@s_name",sname.Text);
                 cmd.Parameters.AddWithValue("@s_age", age.Text);
                 cmd.ExecuteNonQuery();
@@ -110,6 +110,66 @@ namespace Project_2
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_min_Click(object sender, EventArgs e)
+        {
+            if (id.Text != null)
+            {
+                cmd = new SqlCommand("DELETE FROM students WHERE Students.s_id=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", id.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record is Deleted!");
+                show_data();
+            }else{
+                MessageBox.Show("Please Input the ID to Delete");
+            }
+        }
+
+        private void button_avg_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("SELECT S.s_id AS ID, S.s_name AS Student, S.s_age AS age FROM Students S ", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView.DataSource = dt;
+            con.Close();
+        }
+
+        private void min_Click(object sender, EventArgs e)
+        {
+            if (min.Text == "")
+            {
+                MessageBox.Show("Provide Name");
+                return;
+            }
+            con.Open();
+            SqlCommand cmd = new SqlCommand("EXEC studentmin @student = @s", con);
+            cmd.Parameters.AddWithValue("@s", min.Text);
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            // if the class is not exist, show error message
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Can not find this class");
+                con.Close();
+                return;
+            }
+            // show query result
+            MessageBox.Show(dt.Rows[0]["Student"].ToString() + " MIN:  " + dt.Rows[0]["Min_age"].ToString());
+            con.Close();
+        }
+
+        private void avg_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Students WHERE (SELECT AVG(S.s_id) FROM Students S", con);
+           
         }
     }
 }

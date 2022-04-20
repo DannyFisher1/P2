@@ -36,11 +36,14 @@ namespace Project_2
             this.button_min = new System.Windows.Forms.Button();
             this.button_max = new System.Windows.Forms.Button();
             this.sname = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.age = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sid = new System.Windows.Forms.Label();
+            this.max = new System.Windows.Forms.Button();
+            this.avg = new System.Windows.Forms.Button();
+            this.min = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +84,7 @@ namespace Project_2
             this.button_avg.TabIndex = 14;
             this.button_avg.Text = "Update";
             this.button_avg.UseVisualStyleBackColor = true;
+            this.button_avg.Click += new System.EventHandler(this.button_avg_Click);
             // 
             // button_min
             // 
@@ -91,6 +95,7 @@ namespace Project_2
             this.button_min.TabIndex = 13;
             this.button_min.Text = "Delete";
             this.button_min.UseVisualStyleBackColor = true;
+            this.button_min.Click += new System.EventHandler(this.button_min_Click);
             // 
             // button_max
             // 
@@ -110,12 +115,12 @@ namespace Project_2
             this.sname.Size = new System.Drawing.Size(101, 20);
             this.sname.TabIndex = 15;
             // 
-            // textBox1
+            // id
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 194);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 20);
-            this.textBox1.TabIndex = 16;
+            this.id.Location = new System.Drawing.Point(117, 194);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(101, 20);
+            this.id.TabIndex = 16;
             // 
             // age
             // 
@@ -155,17 +160,52 @@ namespace Project_2
             this.sid.Text = "ID";
             this.sid.Click += new System.EventHandler(this.label4_Click);
             // 
+            // max
+            // 
+            this.max.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.max.Location = new System.Drawing.Point(408, 311);
+            this.max.Name = "max";
+            this.max.Size = new System.Drawing.Size(101, 37);
+            this.max.TabIndex = 23;
+            this.max.Text = "MAX";
+            this.max.UseVisualStyleBackColor = true;
+            // 
+            // avg
+            // 
+            this.avg.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.avg.Location = new System.Drawing.Point(259, 311);
+            this.avg.Name = "avg";
+            this.avg.Size = new System.Drawing.Size(101, 37);
+            this.avg.TabIndex = 22;
+            this.avg.Text = "AVG";
+            this.avg.UseVisualStyleBackColor = true;
+            this.avg.Click += new System.EventHandler(this.avg_Click);
+            // 
+            // min
+            // 
+            this.min.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.min.Location = new System.Drawing.Point(117, 311);
+            this.min.Name = "min";
+            this.min.Size = new System.Drawing.Size(101, 37);
+            this.min.TabIndex = 21;
+            this.min.Text = "MIN";
+            this.min.UseVisualStyleBackColor = true;
+            this.min.Click += new System.EventHandler(this.min_Click);
+            // 
             // form_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(618, 393);
+            this.Controls.Add(this.max);
+            this.Controls.Add(this.avg);
+            this.Controls.Add(this.min);
             this.Controls.Add(this.sid);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.age);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.sname);
             this.Controls.Add(this.button_avg);
             this.Controls.Add(this.button_min);
@@ -191,10 +231,13 @@ namespace Project_2
         private System.Windows.Forms.Button button_min;
         private System.Windows.Forms.Button button_max;
         private System.Windows.Forms.TextBox sname;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.TextBox age;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label sid;
+        private System.Windows.Forms.Button max;
+        private System.Windows.Forms.Button avg;
+        private System.Windows.Forms.Button min;
     }
 }
