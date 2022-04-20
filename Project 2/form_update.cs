@@ -142,14 +142,8 @@ namespace Project_2
 
         private void min_Click(object sender, EventArgs e)
         {
-            if (min.Text == "")
-            {
-                MessageBox.Show("Provide Name");
-                return;
-            }
             con.Open();
-            SqlCommand cmd = new SqlCommand("EXEC studentmin @student = @s", con);
-            cmd.Parameters.AddWithValue("@s", min.Text);
+            SqlCommand cmd = new SqlCommand("SELECT MIN(S.s_age) AS 'min'FROM Students S", con);
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapt.Fill(dt);
@@ -161,15 +155,47 @@ namespace Project_2
                 return;
             }
             // show query result
-            MessageBox.Show(dt.Rows[0]["Student"].ToString() + " MIN:  " + dt.Rows[0]["Min_age"].ToString());
+            MessageBox.Show("Student Minimum Age:  " + dt.Rows[0]["min"].ToString());
             con.Close();
         }
 
         private void avg_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Students WHERE (SELECT AVG(S.s_id) FROM Students S", con);
-           
+            SqlCommand cmd = new SqlCommand("SELECT AVG(S.s_age) AS 'avg'FROM Students S", con);
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            // if the class is not exist, show error message
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Can not find this class");
+                con.Close();
+                return;
+            }
+            // show query result
+            MessageBox.Show("Student Average Age:  " + dt.Rows[0]["avg"].ToString());
+            con.Close();
+
+        }
+
+        private void max_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT MIN(S.s_age) AS 'max'FROM Students S", con);
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            // if the class is not exist, show error message
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Can not find this class");
+                con.Close();
+                return;
+            }
+            // show query result
+            MessageBox.Show("Student Maximum Age:  " + dt.Rows[0]["max"].ToString());
+            con.Close();
         }
     }
 }

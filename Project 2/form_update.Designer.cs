@@ -169,6 +169,7 @@ namespace Project_2
             this.max.TabIndex = 23;
             this.max.Text = "MAX";
             this.max.UseVisualStyleBackColor = true;
+            this.max.Click += new System.EventHandler(this.max_Click);
             // 
             // avg
             // 
